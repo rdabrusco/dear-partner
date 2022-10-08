@@ -85,10 +85,17 @@ exports.postSignup = (req, res, next) => {
   });
 
   const user = new User({
-    userName: req.body.userName,
     email: req.body.email,
     password: req.body.password,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    phone: req.body.phone,
+    address: req.body.address,
+    city: req.body.city,
+    state: req.body.state,
+    zip: req.body.zip,
   });
+
 
   User.findOne(
     { $or: [{ email: req.body.email }, { userName: req.body.userName }] },
