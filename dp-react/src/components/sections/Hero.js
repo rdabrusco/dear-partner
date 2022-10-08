@@ -75,7 +75,11 @@ const Hero = ({
                 </p> */}
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
+<<<<<<< HEAD
                   <Button tag="a" color="founder" wideMobile href="https://cruip.com/">
+=======
+                  <Button tag="a" color="founder" wideMobile href="http://localhost:9001/ideas/getIdea">
+>>>>>>> 08e97468 (delete node_modules and api/node_modules)
                     Get started
                     </Button>
                   <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
