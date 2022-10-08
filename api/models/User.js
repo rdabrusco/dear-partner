@@ -17,7 +17,34 @@ const UserSchema = new mongoose.Schema({
   lastName: {
     type: String,
     required: true,
-  }
+  },
+  phoneNumber: {
+    type: String,
+    required: true,
+  },
+  streetAddress: {
+    type: String,
+    required: true,
+  },
+  apartment: {
+    type: String,
+    required: false,
+  },
+  city: {
+    type: String,
+    required: true,
+  },
+  state: {
+    type: String,
+    required: true,
+  },
+  zipCode: {
+    type: String,
+    required: true,
+  },
+
+
+
   
 });
 
