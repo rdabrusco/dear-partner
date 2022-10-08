@@ -4,8 +4,8 @@ const Idea = require("../models/Idea");
 module.exports = {
   getIdea: async (req, res) => {
     try {
-      const posts = await Idea.find({ user: req.user.id });
-      res.render("profile.ejs", { posts: posts, user: req.user });
+      const idea = await Idea.findById(req.params.id);
+      res.send( { idea: idea, user: req.user });
     } catch (err) {
       console.log(err);
     }
@@ -28,16 +28,17 @@ module.exports = {
   },
   createIdea: async (req, res) => {
     try {
+
       // Upload image to cloudinary
 
 
       await Idea.create({
         idea: req.body.title,
-        teamMembers: req.body.teamMembers,
+        teamMembers: [req.user.id],
         founder: req.user.id,
       });
-      console.log("Post has been added!");
-      res.redirect("/profile");
+      console.log("Idea has been added!");
+      // res.redirect(`/idea/${response._id}`);
     } catch (err) {
       console.log(err);
     }

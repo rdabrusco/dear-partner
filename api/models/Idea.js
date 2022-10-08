@@ -9,6 +9,9 @@ const PostSchema = new mongoose.Schema({
     type: Array,
     require: true,
   },
+  tempTeam: {
+    type: Array,
+  },
   founder: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
