@@ -61,7 +61,7 @@ const Hero = ({
         <div className={innerClasses}>
           <div className="hero-content">
           <Image
-                className="has-shadow"
+                // className="has-shadow"
                 src={require('../../assets/images/Group 100.svg')}
                 alt="Hero"
                 width={896}
@@ -69,6 +69,7 @@ const Hero = ({
             {/* <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
               Landing template for <span className="text-color-primary">startups</span>
             </h1> */}
+            <br/>
             <div className="container-xs">
               {/* <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
                 Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.
@@ -76,10 +77,13 @@ const Hero = ({
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
                   <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
-                    Get started
+                    I have an idea
+                    </Button>
+                  <Button tag="a" color="secondary" wideMobile href="https://github.com/cruip/open-react-template/">
+                    I got the skills
                     </Button>
                   <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
-                    View on Github
+                    I'm here to invest
                     </Button>
                 </ButtonGroup>
               </div>
