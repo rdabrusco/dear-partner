@@ -5,12 +5,12 @@ const ideasController = require("../controllers/ideas");
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 //Post Routes - simplified for now
-router.get("/:id", ensureAuth, postsController.getIdea);
+router.get("/:id", ensureAuth, ideasController.getIdea);
 
 router.post("/createIdea", ideasController.createIdea);
 
-router.put("/likePost/:id", postsController.likePost);
+router.put("/likePost/:id", ideasController.likePost);
 
-router.delete("/deletePost/:id", postsController.deletePost);
+router.delete("/deletePost/:id", ideasController.deleteIdea);
 
 module.exports = router;
