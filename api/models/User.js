@@ -9,7 +9,16 @@ const UserSchema = new mongoose.Schema({
     type: String,
     default: 'founder',
     enum: ['founder', 'front-end', 'back-end', 'designer', 'business-manager', 'investor']
-},
+  },
+  firstName: {
+    type: String,
+    required: true,
+  },
+  lastName: {
+    type: String,
+    required: true,
+  }
+  
 });
 
 // Password hash middleware.
