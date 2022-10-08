@@ -89,11 +89,12 @@ exports.postSignup = (req, res, next) => {
     password: req.body.password,
     firstName: req.body.firstName,
     lastName: req.body.lastName,
-    phone: req.body.phone,
+    phoneNumber: req.body.phoneNumber,
     address: req.body.address,
     city: req.body.city,
+    apartment: req.body.apartment || '',
     state: req.body.state,
-    zip: req.body.zip,
+    zipCode: req.body.zipCode,
   });
 
 
