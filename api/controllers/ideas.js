@@ -1,11 +1,14 @@
-const cloudinary = require("../middleware/cloudinary");
 const Idea = require("../models/Idea");
+const dbConnect = require('../config/db.js')
 
 module.exports = {
   getIdea: async (req, res) => {
     try {
-      const idea = await Idea.findById(req.params.id);
-      res.send( { idea: idea, user: req.user });
+      const db = dbConnect()
+      const doc = await db.collection('ideas').doc(req.params.id).get()
+      let idea = doc.data()
+      console.log(idea)
+     
     } catch (err) {
       console.log(err);
     }
@@ -18,14 +21,6 @@ module.exports = {
       console.log(err);
     }
   },
-  getPost: async (req, res) => {
-    try {
-      const post = await Post.findById(req.params.id);
-      res.render("post.ejs", { post: post, user: req.user });
-    } catch (err) {
-      console.log(err);
-    }
-  },
   createIdea: async (req, res) => {
     try {
 
@@ -33,9 +28,9 @@ module.exports = {
 
 
       await Idea.create({
-        idea: req.body.title,
-        teamMembers: [req.user.id],
-        founder: req.user.id,
+        idea: 'Blah',
+        teamMembers: ["Its me"],
+        founder: "Its me",
       });
       console.log("Idea has been added!");
       // res.redirect(`/idea/${response._id}`);
