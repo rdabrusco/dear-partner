@@ -1,5 +1,5 @@
-api/config/.env
+api/config/
 api/node_modules
 .vscode
-
+node_modules
 
