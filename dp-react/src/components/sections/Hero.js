@@ -82,6 +82,9 @@ const Hero = ({
                     </Button>
                   <Button tag="a" color="secondary" wideMobile href="https://github.com/cruip/open-react-template/">
                     I got the skills
+                  <Button tag="a" color="founder" wideMobile href="https://cruip.com/">
+
+                    Get started
                     </Button>
                   <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
                     I'm here to invest
