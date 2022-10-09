@@ -80,7 +80,7 @@ const Hero = ({
                   <Button tag="a" color="primary" wideMobile href="./FounderDashboard/">
                     I have an idea
                     </Button>
-                  <Button tag="a" color="secondary" wideMobile href="https://github.com/cruip/open-react-template/">
+                  <Button tag="a" className="black" color="secondary" wideMobile href="https://github.com/cruip/open-react-template/">
                     I got the skills
                     </Button>
                   <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
@@ -90,6 +90,13 @@ const Hero = ({
               </div>
             </div>
           </div>
+
+          <Image
+                className="padding-top"
+                src={require('../../assets/images/landingpage.png')}
+                alt="what we do"
+                width={896}
+                height={1000} />
           <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="800">
             <a
               data-video="https://player.vimeo.com/video/174002812"
