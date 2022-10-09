@@ -11,6 +11,11 @@ import LayoutDefault from './layouts/LayoutDefault';
 // Views 
 import Home from './views/Home';
 import FounderDashboard from './views/FounderDashboard';
+import FindProfessionals from './views/FindProfessionals';
+import Chat from './views/Chat';
+import WaitingPage from './views/WaitingPage';
+import SearchIdeas from './views/SearchIdeas';
+
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -39,7 +44,12 @@ const App = () => {
       children={() => (
         <Switch>
           <AppRoute exact path="/FounderDashboard/" component={FounderDashboard} layout={LayoutDefault} />
-          <AppRoute exact path="/SignUp/" component={FounderDashboard} layout={LayoutDefault} />
+          <AppRoute exact path="/FindProfessionals/" component={FindProfessionals} layout={LayoutDefault} />
+          <AppRoute exact path="/Chat/" component={Chat} layout={LayoutDefault} />
+          <AppRoute exact path="/WaitingPage/" component={WaitingPage} layout={LayoutDefault} />
+          <AppRoute exact path="/SearchIdeas/" component={SearchIdeas} layout={LayoutDefault} />
+
+
           <AppRoute exact path="/Dashboard/" component={FounderDashboard} layout={LayoutDefault} />
           <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
         </Switch>

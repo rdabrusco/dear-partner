@@ -61,7 +61,7 @@ const Hero = ({
       <div className="container-sm">
         <div className={innerClasses}>
           <div className="hero-content">
-            <p>Founder Dashboard</p>
+            <p>Search Ideas (Slide 17)</p>
           <Image
                 // className="has-shadow"
                 src={'/Group 100.svg'}
