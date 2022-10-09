@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
-import { SectionProps } from '../../utils/SectionProps';
-import ButtonGroup from '../elements/ButtonGroup';
-import Button from '../elements/Button';
-import Image from '../elements/Image';
-import Modal from '../elements/Modal';
+import { SectionProps } from '../utils/SectionProps';
+import ButtonGroup from '../components/elements/ButtonGroup';
+import Button from '../components/elements/Button';
+import Image from '../components/elements/Image';
+import Modal from '../components/elements/Modal';
 // import { Link } from 'react-router-dom';
 
 const propTypes = {
@@ -63,7 +63,7 @@ const Hero = ({
           <div className="hero-content">
           <Image
                 // className="has-shadow"
-                src={require('../../assets/images/Group 100.svg')}
+                src={'/Group 100.svg'}
                 alt="Hero"
                 width={896}
                 height={504} />
@@ -77,14 +77,11 @@ const Hero = ({
                 </p> */}
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile href="./FounderDashboard/">
+                  <Button tag="a" color="primary" wideMobile href="./FounderDashboard">
                     I have an idea
                     </Button>
                   <Button tag="a" color="secondary" wideMobile href="https://github.com/cruip/open-react-template/">
                     I got the skills
-                  <Button tag="a" color="founder" wideMobile href="https://cruip.com/">
-
-                    Get started
                     </Button>
                   <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
                     I'm here to invest
