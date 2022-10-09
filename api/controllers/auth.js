@@ -67,38 +67,40 @@ exports.getSignup = (req, res) => {
 };
 
 exports.postSignup = async (req, res, next) => {
-  const validationErrors = [];
-  if (!validator.isEmail(req.body.email))
-    validationErrors.push({ msg: "Please enter a valid email address." });
-  if (!validator.isLength(req.body.password, { min: 8 }))
-    validationErrors.push({
-      msg: "Password must be at least 8 characters long",
-    });
-  if (req.body.password !== req.body.confirmPassword)
-    validationErrors.push({ msg: "Passwords do not match" });
+  // const validationErrors = [];
+  // if (!validator.isEmail(req.body.email))
+  //   validationErrors.push({ msg: "Please enter a valid email address." });
+  // if (!validator.isLength(req.body.password, { min: 8 }))
+  //   validationErrors.push({
+  //     msg: "Password must be at least 8 characters long",
+  //   });
+  // if (req.body.password !== req.body.confirmPassword)
+  //   validationErrors.push({ msg: "Passwords do not match" });
 
-  if (validationErrors.length) {
-    req.flash("errors", validationErrors);
-    return res.redirect("../signup");
-  }
-  req.body.email = validator.normalizeEmail(req.body.email, {
-    gmail_remove_dots: false,
-  });
-
-  // const user = new User({
-  //   email: req.body.email,
-  //   password: req.body.password,
-  //   firstName: req.body.firstName,
-  //   lastName: req.body.lastName,
-  //   phoneNumber: req.body.phoneNumber,
-  //   address: req.body.address,
-  //   city: req.body.city,
-  //   apartment: req.body.apartment || '',
-  //   state: req.body.state,
-  //   zipCode: req.body.zipCode,
+  // if (validationErrors.length) {
+  //   req.flash("errors", validationErrors);
+  //   return res.redirect("../signup");
+  // }
+  // req.body.email = validator.normalizeEmail(req.body.email, {
+  //   gmail_remove_dots: false,
   // });
+
+  // // const user = new User({
+  // //   email: req.body.email,
+  // //   password: req.body.password,
+  // //   firstName: req.body.firstName,
+  // //   lastName: req.body.lastName,
+  // //   phoneNumber: req.body.phoneNumber,
+  // //   address: req.body.address,
+  // //   city: req.body.city,
+  // //   apartment: req.body.apartment || '',
+  // //   state: req.body.state,
+  // //   zipCode: req.body.zipCode,
+  // // });
+
 
   const db = dbConnect()
   const user = await db.collection('users').add(req.body)
   console.log(user)
+  res.send('Ok!')
 };
