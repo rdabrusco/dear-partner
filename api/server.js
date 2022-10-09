@@ -26,27 +26,19 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Logging
-app.use(logger("dev"));
 
 //Use forms for put / delete
-app.use(methodOverride("_method"));
 
 // Setup Sessions - stored in MongoDB
-app.use(
-  session({
-    secret: "keyboard cat",
-    resave: false,
-    saveUninitialized: false,
-    store: new MongoStore({ mongooseConnection: mongoose.connection }),
-  })
-);
+
+
+
 
 // Passport middleware
 app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.session());
 
 //Use flash messages for errors, info, ect...
-app.use(flash());
 
 //SET GLOBAL VARIABLE
 app.use(function(req, res, next) {
