@@ -9,7 +9,7 @@ router.get("/:id",  ideasController.getIdea);
 
 router.post("/createIdea", ideasController.createIdea);
 
-router.put("/addTeamMember/:tid&:uid", ideasController.addTeamMember, ideasController.updateEquity);
+router.put("/addTeamMember/:tid&:uid", ideasController.addTeamMember);
 router.put("/addTempTeamMember/:tid&:uid", ideasController.addTempTeamMember);
 
 

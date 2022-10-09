@@ -79,17 +79,17 @@ module.exports = {
       console.log(err)
     }
   },
-  updateEquity: async (req, res) => {
-    try {
-      console.log('is running?')
-      const doc = await db.collection('ideas').doc(req.params.tid).get()
-      let idea = doc.data()
-      idea.remainingEquity = 100 - Number(idea.ownerEquity) / idea.teamMembers.length - 1
+  // updateEquity: async (req, res) => {
+  //   try {
+  //     console.log('is running?')
+  //     const doc = await db.collection('ideas').doc(req.params.tid).get()
+  //     let idea = doc.data()
+  //     idea.remainingEquity = 100 - Number(idea.ownerEquity) / idea.teamMembers.length - 1
 
-    }catch (err) {
-      console.log(err);
-    }
-  },
+  //   }catch (err) {
+  //     console.log(err);
+  //   }
+  // },
 
   deleteIdea: async (req, res) => {
     try {
