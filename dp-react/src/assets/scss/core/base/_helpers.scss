@@ -168,6 +168,68 @@ img.has-shadow {
 	}
 }
 
+// .left img{
+// 	margin-left: 0;
+// }
+
+.center-img{
+	margin: auto;
+}
+
+.big-img {
+	height: 50%;
+}
+.no-top{
+	padding-top: 20px;
+}
+
+.flex{
+	display: flex;
+	justify-content: space-between;
+}
+
+.start{
+	justify-content: space-around;
+}
+
+.column{
+	flex-direction: column;
+	padding-bottom: 80px;
+}
+
+.left-align{
+	text-align: left;
+}
+.left-none{
+	margin-left: 0;
+}
+.black{
+	color: black;
+}
+
+.small-txt{
+	font-size: 14px;
+}
+.middle-dashboard{
+	width: 65%;
+}
+
+.no-margin{
+	margin: 0;
+}
+
+.self-center{
+	align-self: center;
+	margin-bottom:100px;
+	margin-left: 0 !important;
+	margin-right: 0 !important
+}
+
+
+
+.icons{
+	
+}
 // Responsive video
 .responsive-video {
 	position: relative;
