@@ -89,16 +89,42 @@
 		}
 	}
 }
-	
 
 .button-primary {
-	top: 899px;
-	width: 364px;
-	height: 75px;
-	border-radius: 10px;
-	opacity: 1;
+	color: color(button-primary);
+    background-color: color-bg(button-primary);
+	border-color: color-border(button-primary);
+
+    &:hover {
+        background-color: color-bg(button-primary-hover);
+		border-color: color-border(button-primary-hover);
+    }
+
+	&.is-loading {
+
+		&::after {
+			border-color: color(button-primary);
+		}
+	}
 }
 
+.button-secondary {
+	color: color(button-secondary);
+    background-color: color-bg(button-secondary);
+	border-color: color-border(button-secondary);
+
+    &:hover {
+        background-color: color-bg(button-secondary-hover);
+		border-color: color-border(button-secondary-hover);
+    }
+
+	&.is-loading {
+
+		&::after {
+			border-color: color(button-secondary);
+		}
+	}
+}
 
 .button-block {
     display: flex;

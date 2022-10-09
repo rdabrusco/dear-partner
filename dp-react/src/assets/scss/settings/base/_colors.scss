@@ -12,7 +12,6 @@ $palette: (
 		2: #0EB262,
 		3: #33363A
 	),
-
 	primary: (
 		1: #FF0076,
 		2: #ACADFF,
@@ -24,10 +23,11 @@ $palette: (
 		2: #73EFCC,
 		3: #1CB68B,
 		4: #D2F9EE
-
 	),
-	money: (
-		1: #0EB262
+	alert: (
+		error: #FF6171,
+		warning: #FFA173,
+		success: #24E5AF
 	)
 );
 
